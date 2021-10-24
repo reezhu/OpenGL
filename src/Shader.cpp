@@ -117,7 +117,7 @@ int Shader::GetUniformLocation(const std::string& name)
     if (m_uniformLocationCache.find(name) != m_uniformLocationCache.end())
         return m_uniformLocationCache[name];
     GLCall(int location = glGetUniformLocation(m_RendererID, name.c_str()));
-    if (location == -1) 
+    if (location == -1) //这个地方作者最初错误的把location设置成了unsigned int，导致永远得不到-1，在后面的视频中更正了
         std::cout << "Warning:uniform not exist!"<<name << std::endl;
     m_uniformLocationCache[name] = location;
 	return location;
