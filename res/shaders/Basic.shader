@@ -6,9 +6,11 @@ layout(location=1) in vec2 texCoord;
 
 out vec2 v_TexCoord;
 
+uniform mat4 u_MVP;
+
 void main()
 {
-	gl_Position=position;
+	gl_Position = u_MVP * position;
 	v_TexCoord = texCoord;
 
 };
@@ -28,7 +30,7 @@ void main()
 {
 
 	vec4 texColor = texture(u_Texture, v_TexCoord);
-	color = texColor+(u_Color*0.2);//为了让u_Color能有用，我加到了图片上产生了闪烁的效果
+	color = texColor;
 	// 这里我为了检查为什么没办法显示logo，把坐标使用rg两个参数打印了出来，得到了一张纯蓝的图，告诉我坐标永远返回的0
 	// 最后发现在VertexArray文件中一个参数没有根据element的index来赋值
 	//color = vec4(v_TexCoord[0],v_TexCoord[1],1,1);  
