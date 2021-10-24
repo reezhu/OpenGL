@@ -69,13 +69,17 @@ int main(void)
        
         IndexBuffer ib(indices, 6);
 
-        glm::mat4 proj = glm::ortho(0.0f, 960.0f, 0.0f, 540.0f, -1.0f, 1.0f);//正交投影变换，可以把物体映射到屏幕的平面
+        //正交投影变换，可以把物体映射到屏幕的平面，注意ortho不包含近大远小，用于2d画面（横板卷轴？）
+        glm::mat4 proj = glm::ortho(0.0f, 960.0f, 0.0f, 540.0f, -1.0f, 1.0f);
+        glm::mat4 view = glm::translate(glm::mat4(1.0f), glm::vec3(-100, 0, 0));//camera视角变换
+        glm::mat4 model = glm::translate(glm::mat4(1.0f), glm::vec3(200, 200, 0));//模型本身的变换
+        glm::mat4 mvp = proj * view * model;
 
         Shader shader = Shader("res/shaders/Basic.shader");
         shader.Bind();
         shader.SetUniform1i("u_Texture", 0);
         shader.SetUniform4f("u_Color", 0.8f, 0.3f, 0.8f, 1.0f);
-        shader.SetUniformMat4f("u_MVP", proj);
+        shader.SetUniformMat4f("u_MVP", mvp);
 
 
         Renderer renderer;
