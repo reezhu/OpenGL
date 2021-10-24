@@ -10,7 +10,7 @@ uniform mat4 u_MVP;
 
 void main()
 {
-	gl_Position = u_MVP * position;
+	gl_Position = u_MVP * position;//这个是矩阵乘法，应该只能左乘不能放在右边
 	v_TexCoord = texCoord;
 
 };

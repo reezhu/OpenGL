@@ -69,7 +69,7 @@ int main(void)
        
         IndexBuffer ib(indices, 6);
 
-        glm::mat4 proj = glm::ortho(-2.0f, 2.0f, -1.5f, 1.5f, -1.0f, 1.0f);
+        glm::mat4 proj = glm::ortho(-2.0f, 2.0f, -1.5f, 1.5f, -1.0f, 1.0f);//正交投影变换，可以把物体映射到屏幕的平面
 
         Shader shader = Shader("res/shaders/Basic.shader");
         shader.Bind();
