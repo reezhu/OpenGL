@@ -72,12 +72,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);E:\OneDrive - reezhu\VenvCpp\GLFW\include;E:\OneDrive - reezhu\VenvCpp\glew-2.1.0\include;src\vendor</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);E:\OneDrive - reezhu\VenvCpp\GLFW\include;E:\OneDrive - reezhu\VenvCpp\glew-2.1.0\include;src\vendor;src</IncludePath>
     <LibraryPath>E:\OneDrive - reezhu\VenvCpp\GLFW\lib-vc2019;E:\OneDrive - reezhu\VenvCpp\glew-2.1.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);E:\OneDrive - reezhu\VenvCpp\GLFW\include;E:\OneDrive - reezhu\VenvCpp\glew-2.1.0\include;src\vendor</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);E:\OneDrive - reezhu\VenvCpp\GLFW\include;E:\OneDrive - reezhu\VenvCpp\glew-2.1.0\include;src\vendor;src</IncludePath>
     <LibraryPath>E:\OneDrive - reezhu\VenvCpp\GLFW\lib-vc2019;E:\OneDrive - reezhu\VenvCpp\glew-2.1.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -311,12 +311,14 @@
     <ClCompile Include="src\vendor\stb_image\stb_image.cpp" />
     <ClCompile Include="src\VertexArray.cpp" />
     <ClCompile Include="src\VertexBuffer.cpp" />
+    <ClCompile Include="src\test\TestClearColor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Application.h" />
     <ClInclude Include="src\IndexBuffer.h" />
     <ClInclude Include="src\Renderer.h" />
     <ClInclude Include="src\Shader.h" />
+    <ClInclude Include="src\test\Test.h" />
     <ClInclude Include="src\Texture.h" />
     <ClInclude Include="src\vendor\glm\common.hpp" />
     <ClInclude Include="src\vendor\glm\detail\compute_common.hpp" />
@@ -615,6 +617,7 @@
     <ClInclude Include="src\VertexArray.h" />
     <ClInclude Include="src\VertexBuffer.h" />
     <ClInclude Include="src\VertexBufferLayout.h" />
+    <ClInclude Include="src\test\TestClearColor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
