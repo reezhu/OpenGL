@@ -217,6 +217,9 @@
     <ClCompile Include="src\test\Test.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\test\TestTexture2D.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\IndexBuffer.h">
@@ -539,5 +542,6 @@
     <ClInclude Include="src\vendor\imgui\stb_truetype.h" />
     <ClInclude Include="src\test\Test.h" />
     <ClInclude Include="src\test\TestClearColor.h" />
+    <ClInclude Include="src\test\TestTexture2D.h" />
   </ItemGroup>
 </Project>
