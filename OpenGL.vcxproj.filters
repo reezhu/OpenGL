@@ -214,6 +214,9 @@
     <ClCompile Include="src\test\TestClearColor.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\test\Test.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\IndexBuffer.h">
